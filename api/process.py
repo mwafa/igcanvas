@@ -6,11 +6,12 @@ class handler(BaseHTTPRequestHandler):
 
   def do_GET(self):
     self.send_response(200)
-    self.send_header('Content-type','text/plain')
+    self.send_header('Content-type','text/html')
     self.end_headers()
-    self.wfile.write(
-      str("it's work!").encode()
-    )
+    with open('index.html', 'r') as index:
+      self.wfile.write(
+        index.read().encode()
+      )
     return
   
   def do_POST(self):
