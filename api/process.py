@@ -23,6 +23,8 @@ class handler(BaseHTTPRequestHandler):
     filename = form['file'].filename
     data = form['file'].file.read()
     filepath = "%s-%s" % (time.time(), filename)
+    if(os.path.exists('/tmp')):
+      filepath = '/tmp/' + filepath
     with open(filepath, 'wb') as f:
       f.write(data)
     igcanvas.genImage(filepath).save(filepath)
