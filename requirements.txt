@@ -1,1 +1,4 @@
 igcanvas
+pdf2image
+Pillow
+pypdf2

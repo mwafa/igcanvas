@@ -18,17 +18,17 @@
   </head>
   <body>
     <div class="form">
-      <h3>Upload Image File</h3>
+      <h3>Upload Pdf File</h3>
       <p>igcanvas - simple canvas look for Instagram feed</p>
       <form
-        action="/api/process.jpg"
+        action="/api/process.pdf"
         method="POST"
         enctype="multipart/form-data"
       >
         <input type="file" name="file" />
+        <input type="number" name="start" value="10" />
         <input type="submit" value="Upload" />
       </form>
     </div>
-    <a href="/pdf.html">PDF</a>
   </body>
 </html>
